@@ -1,6 +1,7 @@
 "use client";
 
-import { AiOutlineLinkedin, AiFillGithub } from 'react-icons/ai';
+import { useState } from 'react';
+import { AiOutlineLinkedin, AiFillGithub, AiOutlineMail, AiOutlineCopy } from 'react-icons/ai';
 
 const experiences = [
   {
@@ -51,6 +52,16 @@ const experiences = [
 ];
 
 export default function Home() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [tooltipText, setTooltipText] = useState("gowtham@example.com");
+  const email = "gowtham@example.com";
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setTooltipText("Email copied!");
+    setTimeout(() => setTooltipText(email), 2000);
+  };
+
   return (
     <div className="min-h-screen bg-[rgb(15,23,42)] flex justify-center">
       <div className="max-w-[1400px] w-full flex flex-col md:flex-row">
@@ -75,6 +86,21 @@ export default function Home() {
             >
               <AiOutlineLinkedin size={24} />
             </a>
+            <div
+              className="relative group"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              onClick={handleCopyEmail}
+            >
+              {isHovered ? (
+                <AiOutlineCopy size={24} className="text-[#b3b3b3] hover:text-white" />
+              ) : (
+                <AiOutlineMail size={24} className="text-[#b3b3b3] hover:text-white" />
+              )}
+              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                {tooltipText}
+              </span>
+            </div>
           </footer>
         </div>
         <div className="w-full md:w-[70vw] flex flex-col justify-start items-center overflow-y-auto h-screen scrollbar-hide">
@@ -84,12 +110,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="pt-12 px-4 text-[#b3b3b3] pl-16 pt-20">
-            {/* <h3 className="text-xl font-bold mb-4">Experience</h3> */}
+          <div className="pt-12 px-4 pl-20 text-[#b3b3b3]">
+            <h3 className="text-xl font-bold mb-4">Experience</h3>
             {experiences.map((exp, index) => (
-              <div key={index} className="flex mb-10">
-                {/* <div className="bg-[#b3b3b3] h-3 w-3 rounded-full mt-2"></div> */}
-                {/* <div className="w-0.5 bg-[#b3b3b3] ml-1 h-20 mt-2 mb-5"></div> */}
+              <div key={index} className="flex mb-5">
+                <div className="bg-[#b3b3b3] h-3 w-3 rounded-full mt-2"></div>
+                <div className="w-0.5 bg-[#b3b3b3] ml-1 h-20"></div>
                 <div className="flex flex-col ml-4">
                   <span className="font-bold">
                     {exp.position} <span className="ml-2">({exp.year})</span>
