@@ -54,7 +54,7 @@ const experiences = [
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const [tooltipText, setTooltipText] = useState("gowtham@example.com");
-  const email = "gowtham@example.com";
+  const email = "gowtham.91m@gmail.com";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
