@@ -52,8 +52,8 @@ const experiences = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col pl-4 bg-[rgb(15,23,42)]">
-      <div className="max-w-[1400px] w-full mx-auto flex flex-col md:flex-row flex-grow">
+    <div className="min-h-screen bg-[rgb(15,23,42)] flex justify-center">
+      <div className="max-w-[1400px] w-full flex flex-col md:flex-row">
         <div className="w-full md:w-[30vw] flex flex-col justify-between pt-[100px] pl-4">
           <div className="flex-grow mb-4">
             <h1 className="text-[#b3b3b3] text-4xl">Gowtham Mallikarjuna</h1>
@@ -77,19 +77,19 @@ export default function Home() {
             </a>
           </footer>
         </div>
-        <div className="w-full md:w-[70vw] flex flex-col justify-start items-center">
-          <div className="pt-[100px] pl-4 md:pl-30 pb-4">
+        <div className="w-full md:w-[70vw] flex flex-col justify-start items-center overflow-y-auto h-screen scrollbar-hide">
+          <div className="pt-[100px] pl-4 md:pl-20 pb-4">
             <p className="text-[#b3b3b3] text-lg">
               As a seasoned full stack developer, I bring a wealth of experience in Java, Python, and TypeScript, with a strong focus on the React framework. My proficiency in AWS services, including Lambda, Fargate, EC2, DynamoDB, and S3, empowers me to build robust applications on cloud infrastructure. Leveraging the AWS CDK, I adhere to software development best practices to deliver scalable and efficient solutions.
             </p>
           </div>
 
-          <div className="pt-12 pl-30 px-4 text-[#b3b3b3]">
-            <h3 className="text-xl font-bold mb-4">Experience</h3>
+          <div className="pt-12 px-4 text-[#b3b3b3] pl-16 pt-20">
+            {/* <h3 className="text-xl font-bold mb-4">Experience</h3> */}
             {experiences.map((exp, index) => (
-              <div key={index} className="flex mb-5">
-                <div className="bg-[#b3b3b3] h-3 w-3 rounded-full mt-2"></div>
-                <div className="w-0.5 bg-[#b3b3b3] ml-1 h-20 mt-2 mb-5"></div>
+              <div key={index} className="flex mb-10">
+                {/* <div className="bg-[#b3b3b3] h-3 w-3 rounded-full mt-2"></div> */}
+                {/* <div className="w-0.5 bg-[#b3b3b3] ml-1 h-20 mt-2 mb-5"></div> */}
                 <div className="flex flex-col ml-4">
                   <span className="font-bold">
                     {exp.position} <span className="ml-2">({exp.year})</span>
@@ -99,7 +99,8 @@ export default function Home() {
                     {exp.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="rounded-full px-4 py-1 m-1 bg-teal-100 text-teal-600 text-xs font-medium"
+                        className="rounded-full px-4 py-1 m-1 text-teal-600 text-xs font-medium"
+                        style={{ backgroundColor: 'rgba(0, 128, 128, 0.1)' }}
                       >
                         {tag}
                       </span>
