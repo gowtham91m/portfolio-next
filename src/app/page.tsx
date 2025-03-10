@@ -54,7 +54,7 @@ const experiences = [
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const [tooltipText, setTooltipText] = useState("gowtham@example.com");
-  const email = "gowtham.91m@gmail.com";
+  const email = "email@gowtham.io";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -114,9 +114,9 @@ export default function Home() {
             <h3 className="text-xl font-bold mb-4">Experience</h3>
             {experiences.map((exp, index) => (
               <div key={index} className="flex mb-5">
-                <div className="bg-[#b3b3b3] h-3 w-3 rounded-full mt-2"></div>
-                <div className="w-0.5 bg-[#b3b3b3] ml-1 h-20"></div>
-                <div className="flex flex-col ml-4">
+                {/* <div className="bg-[#b3b3b3] h-3 w-3 rounded-full mt-2"></div> */}
+                {/* <div className="w-0.5 bg-[#b3b3b3] ml-1 h-20"></div> */}
+                <div className="flex flex-col">
                   <span className="font-bold">
                     {exp.position} <span className="ml-2">({exp.year})</span>
                   </span>
