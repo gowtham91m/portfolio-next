@@ -53,7 +53,7 @@ const experiences = [
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
-  const [tooltipText, setTooltipText] = useState("gowtham@example.com");
+  const [tooltipText, setTooltipText] = useState("email@gowtham.io");
   const email = "email@gowtham.io";
 
   const handleCopyEmail = () => {
