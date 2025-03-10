@@ -69,7 +69,7 @@ export default function Home() {
           <div className="flex-grow mb-4">
             <h1 className="text-[#b3b3b3] text-4xl">Gowtham Mallikarjuna</h1>
           </div>
-          <footer className="flex items-center space-x-4 pt-4 pb-[100px]">
+          <footer className="flex items-center space-x-4 pt-4 pb-[20px] md:pb-[100px]">
             <a
               href="https://github.com/gowtham91m"
               target="_blank"
@@ -103,14 +103,14 @@ export default function Home() {
             </div>
           </footer>
         </div>
-        <div className="w-full md:w-[70vw] flex flex-col justify-start items-center overflow-y-auto h-screen scrollbar-hide">
+        <div className="w-full md:w-[70vw] flex flex-col justify-start items-center md:overflow-y-auto md:h-screen pb-10">
           <div className="pt-[100px] pl-4 md:pl-20 pb-4">
             <p className="text-[#b3b3b3] text-lg">
               As a seasoned full stack developer, I bring a wealth of experience in Java, Python, and TypeScript, with a strong focus on the React framework. My proficiency in AWS services, including Lambda, Fargate, EC2, DynamoDB, and S3, empowers me to build robust applications on cloud infrastructure. Leveraging the AWS CDK, I adhere to software development best practices to deliver scalable and efficient solutions.
             </p>
           </div>
 
-          <div className="pt-12 px-4 pl-20 text-[#b3b3b3]">
+          <div className="pt-12 px-4 pl-5 md:pl-20 text-[#b3b3b3]">
             <h3 className="text-xl font-bold mb-4">Experience</h3>
             {experiences.map((exp, index) => (
               <div key={index} className="flex mb-5">
