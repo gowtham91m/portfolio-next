@@ -82,7 +82,11 @@ export default function Home() {
                   <span className="mt-2">{exp.description}</span>
                   <div className="flex flex-wrap mt-2">
                     {exp.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="tag">
+                      <span
+                        key={tagIndex}
+                        className="rounded-full px-4 py-1 m-1 text-teal-600 text-xs font-medium"
+                        style={{ backgroundColor: 'rgba(0, 128, 128, 0.1)' }}
+                      >
                         {tag}
                       </span>
                     ))}
