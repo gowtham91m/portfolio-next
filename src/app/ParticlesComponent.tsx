@@ -2,7 +2,7 @@
 
 import Particles from 'react-particles'; // Import the particles component
 import { loadSlim } from 'tsparticles-slim'; // Import the loadSlim function
-import { Engine } from 'tsparticles'; // Import the Engine type
+import type { Engine } from 'tsparticles-engine'; // Import types from tsparticles-engine
 
 const ParticlesComponent = () => {
   const particlesInit = async (main: Engine) => {
