@@ -1,4 +1,4 @@
-export default [
+const experiences = [
     {
       year: "2019 - present",
       position: "Amazon - Software Development Engineer",
@@ -45,3 +45,5 @@ export default [
       tags: ["Oracle", "PL/SQL", "Java"],
     },
   ];
+
+export default experiences;

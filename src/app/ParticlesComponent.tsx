@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect } from 'react';
 import Particles from 'react-particles'; // Import the particles component
 import { loadSlim } from 'tsparticles-slim'; // Import the loadSlim function
+import { Engine } from 'tsparticles'; // Import the Engine type
 
 const ParticlesComponent = () => {
-  const particlesInit = async (main: any) => {
+  const particlesInit = async (main: Engine) => {
     await loadSlim(main); // Initialize particles
   };
 
