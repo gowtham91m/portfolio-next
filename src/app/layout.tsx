@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gowtham Mallikarjuna",
-  description: "Gowtham Mallikarjuna's Portfolio",
+  title: "Gowtham - Full-Stack Developer Portfolio",
+  description:
+    "Gowtham's portfolio showcasing experience building large-scale distributed systems",
+  keywords: ["Gowtham", "Gowtham Mallikarjuna", "full-stack developer", "Java", "Python", "React", "AWS", "portfolio", "web development"],
+  authors: [{ name: "Gowtham Mallikarjuna" }],
 };
 
 export default function RootLayout({
